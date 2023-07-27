@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.header {
+    height: 120px;
+    background: #ff5500;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+.header-content {
+    width: 80%;
+}
+.nav a {
+    color: white ;
+    font-size: 12px;
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+.glass {
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}

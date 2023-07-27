@@ -1,0 +1,101 @@
+.header {
+    width: 100%;
+    height: 100px;
+}
+
+.header-logo {
+    margin: 1px;
+    border: 1px solid black;
+    width: 20%;
+    height: calc(100% - 2px);
+    float: left;
+}
+
+.header-banner {
+    border: 1px black solid;
+    width: calc(100% - 20% - 4px - 4px);
+    height: calc(100% - 2px);
+    float: left;
+    margin: 1px;
+}
+.nav-bar {
+    border: 1px black solid;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+}
+.nav-bar-content {
+    border-right: 1px black solid;
+    width: 5%;
+    height: 20px;
+    float: left;
+    margin: 5px;
+    color: blue;
+}
+.search input{
+    float: right;
+    border: 1px black solid;
+    width: 15%;
+    height: 20px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 10px;
+}
+.main {
+
+    width: 100%;
+    height: 500px;
+    margin-top: 5px;
+}
+.main-left {
+    width: 7%;
+    height: 500px;
+    float: left;
+
+}
+.main-left-content1 {
+  width: 100%;
+    height: 200px;
+  border: 1px black solid;
+}
+
+.main-left-content1 p{
+    width: calc(100% - 5px);
+    height: 20px;
+    margin: 7px 5px 5px 5px;
+
+}
+
+.main-left-content2 {
+    width: 100%;
+    height: 250px;
+    border: 1px black solid;
+    margin-top: 5px;
+}
+.main-mid {
+    width: 80%;
+    height: 500px;
+    border: 1px black solid;
+    float: left;
+    margin-left: 5px;
+}
+.main-mid-content {
+    width: 100%;
+    height: 120px;
+    border: 1px black solid;
+    float: left;
+}
+
+.main-right {
+    width: calc(100% - 7% - 80% - 15px );
+    height: 500px;
+    border: 1px black solid;
+    float: left;
+    margin-right : 3px ;
+    margin-left: 3px;
+}
+.footer {
+    width: 100%;
+    height: 40px;
+    border: 1px black solid;
+    margin-top: 5px;
+}

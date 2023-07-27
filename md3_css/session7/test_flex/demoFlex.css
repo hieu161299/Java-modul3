@@ -1,0 +1,44 @@
+/*
+.container {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around
+
+}
+.container-box {
+    width: 30%;
+    height: 150px;
+    border: 1px solid black;
+    background: #0048ff;
+
+}
+.container-content {
+    width: 60%;
+    height: 150px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+*/
+
+.box {
+    width: 100%;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+
+    flex-wrap: wrap ;
+    gap: 10px;
+  //  justify-content: space-around;
+
+}
+.item {
+    width: 30%;
+    height: 120px;
+    border: 1px solid black;
+
+}
+
