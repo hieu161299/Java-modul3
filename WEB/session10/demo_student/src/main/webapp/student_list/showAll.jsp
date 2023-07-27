@@ -15,6 +15,7 @@
 <body>
 <a href="/students?action=create">Thêm mới sinh viên</a>
 <a href="/user?action=logout">Đăng xuất</a>
+<a href="/user?action=information&idUser=${idUser}">Thông tin cá nhân</a>
 <br>
     <table border="1">
         <tr  >
@@ -29,7 +30,7 @@
 
             <tr>
                 <td>${student.id}</td>
-                <td>${student.name}</td>
+                <td><a href="/students?action=detail&id=${student.id}">${student.name}</a></td>
                 <td>${student.age}</td>
                 <td><img src="${student.image}" alt="sv"></td>
                 <td><a href="http://localhost:8080/students?action=edit&id=${student.id}">Sửa</a></td>

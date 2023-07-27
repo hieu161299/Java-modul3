@@ -11,6 +11,7 @@
         <input type="text" name="username">
         <input type="password" name="password">
         <button type="submit">Đăng nhập</button>
+         <a href="http://localhost:8080/user?action=register">Đăng ký</a>
     </form>
 </body>
 </html>

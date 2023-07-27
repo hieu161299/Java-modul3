@@ -1,5 +1,6 @@
 package app.controller;
 
+import app.model.User;
 import app.service.UserService;
 
 import javax.servlet.*;
@@ -20,7 +21,26 @@ public class UserController extends HttpServlet {
             case "logout":
                 logout(request, response);
                 break;
+            case "register":
+                showRegisterForm(request, response);
+                break;
+            case "information":
+                showInformation(request ,response);
+                break;
         }
+    }
+
+    private void showInformation(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int idUser = Integer.parseInt(request.getParameter("idUser"));
+        User user = userService.getUser(idUser);
+        request.setAttribute("user" , user);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/user/information.jsp");
+        dispatcher.forward(request , response);
+    }
+
+    private void showRegisterForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/register.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,13 +60,29 @@ public class UserController extends HttpServlet {
             case "login":
                 login(request, response);
                 break;
+            case "register":
+                register(request , response);
+                break;
         }
+    }
+
+    private void register(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        User user = new User(id , username , password , "user");
+
+        userService.add(user);
+        response.sendRedirect("/user?action=login");
     }
 
     private void login(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
         if (userService.checkUser(username , password)){
+            HttpSession session = request.getSession();
+            session.setAttribute("idUser" , userService.getIdUser(username , password) );
             response.sendRedirect("/students?action=showAll");
         }else {
             response.sendRedirect("/user?action=login");

@@ -33,4 +33,13 @@ public class UserService {
         return -1;
     }
 
+    public User getUser (int id){
+        for (User user: userList) {
+            if (user.getId() == id){
+                return user;
+            }
+        }
+        return null;
+    }
+
 }
