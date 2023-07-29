@@ -7,34 +7,40 @@
 </head>
 
 <style>
-  img {
-    width: 100px;
-    height: 100px;
-  }
+    img {
+        width: 100px;
+        height: 100px;
+    }
 </style>
 <body>
-<table border="1">
-  <tr  >
-    <th>ID</th>
-    <th>Tên</th>
-    <th>Tuổi</th>
-    <th>Ảnh</th>
+<c:if test="${searchList.size()  == 0}">
+    <p>Không có</p>
+</c:if>
+<c:if test="${searchList.size()  > 0}">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Ảnh</th>
 
-  </tr>
+        </tr>
 
-  <c:forEach items="${searchList}" var="student">
+        <c:forEach items="${searchList}" var="student">
 
-    <tr>
-      <td>${student.id}</td>
-      <td>${student.name}</td>
-      <td>${student.age}</td>
-      <td><img src="${student.image}" alt="sv"></td>
+            <tr>
+                <td>${student.id}</td>
+                <td>${student.name}</td>
+                <td>${student.age}</td>
+                <td><img src="${student.image}" alt="sv"></td>
 
-    </tr>
+            </tr>
 
-  </c:forEach>
+        </c:forEach>
 
-</table>
+    </table>
+</c:if>
+
 
 <a href="/students?action=showAll">Trở về trang chủ</a>
 </body>

@@ -31,8 +31,13 @@ public class UserController extends HttpServlet {
     }
 
     private void showInformation(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int idUser = Integer.parseInt(request.getParameter("idUser"));
-        User user = userService.getUser(idUser);
+        /*int idUser = Integer.parseInt(request.getParameter("idUser"));
+        User user = userService.getUser(idUser);*/
+
+        HttpSession session = request.getSession();
+        int id = (int) session.getAttribute("idUser");
+
+        User user = userService.getUser(id);
         request.setAttribute("user" , user);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user/information.jsp");
         dispatcher.forward(request , response);
@@ -50,6 +55,7 @@ public class UserController extends HttpServlet {
 
     private void showLoginForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             RequestDispatcher dispatcher = request.getRequestDispatcher("user/login.jsp");
+
             dispatcher.forward(request, response);
     }
 
@@ -85,7 +91,7 @@ public class UserController extends HttpServlet {
             session.setAttribute("idUser" , userService.getIdUser(username , password) );
             response.sendRedirect("/students?action=showAll");
         }else {
-            response.sendRedirect("/user?action=login");
+            response.sendRedirect("/user?action=login&tb=loi");
         }
     }
 }

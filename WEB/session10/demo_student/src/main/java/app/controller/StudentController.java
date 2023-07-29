@@ -46,7 +46,7 @@ public class StudentController extends HttpServlet {
         }
 
     }
-
+    // khi click vào tên hiển thị toàn bộ thông tin của sinh viên đó
     private void showDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         int index = studentService.findById(id);
@@ -54,11 +54,11 @@ public class StudentController extends HttpServlet {
         request.setAttribute("student", student);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/student_list/detail.jsp");
         dispatcher.forward(request, response);
+
     }
 
     private void searchStudent(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("nameSearch");
-
 
         request.setAttribute("searchList", studentService.findByName(name));
         RequestDispatcher dispatcher = request.getRequestDispatcher("student_list/search.jsp");

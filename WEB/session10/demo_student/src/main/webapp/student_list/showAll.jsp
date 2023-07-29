@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 
@@ -16,31 +16,32 @@
 <a href="/students?action=create">Thêm mới sinh viên</a>
 <a href="/user?action=logout">Đăng xuất</a>
 <a href="/user?action=information&idUser=${idUser}">Thông tin cá nhân</a>
+
 <br>
-    <table border="1">
-        <tr  >
-            <th>ID</th>
-            <th>Tên</th>
-            <th>Tuổi</th>
-            <th>Ảnh</th>
-            <th colspan="2">Action</th>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Ảnh</th>
+        <th colspan="2">Action</th>
+    </tr>
+
+    <c:forEach items="${studentList}" var="student">
+
+        <tr>
+            <td>${student.id}</td>
+            <td><a href="/students?action=detail&id=${student.id}">${student.name}</a></td>
+            <td>${student.age}</td>
+            <td><img src="${student.image}" alt="sv"></td>
+            <td><a href="http://localhost:8080/students?action=edit&id=${student.id}">Sửa</a></td>
+            <td><a href="http://localhost:8080/students?action=delete&id=${student.id}">Xóa</a></td>
+
         </tr>
 
-        <c:forEach items="${studentList}" var="student">
+    </c:forEach>
 
-            <tr>
-                <td>${student.id}</td>
-                <td><a href="/students?action=detail&id=${student.id}">${student.name}</a></td>
-                <td>${student.age}</td>
-                <td><img src="${student.image}" alt="sv"></td>
-                <td><a href="http://localhost:8080/students?action=edit&id=${student.id}">Sửa</a></td>
-                <td><a href="http://localhost:8080/students?action=delete&id=${student.id}">Xóa</a></td>
-
-            </tr>
-
-        </c:forEach>
-
-    </table>
+</table>
 
 <form action="/students" method="get">
     <input type="hidden" name="action" value="search">
