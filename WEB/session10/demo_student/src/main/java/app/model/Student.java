@@ -12,6 +12,11 @@ public class Student {
         this.age = age;
         this.image = image;
     }
+    public Student( String name, int age, String image) {
+        this.name = name;
+        this.age = age;
+        this.image = image;
+    }
 
     public int getId() {
         return id;

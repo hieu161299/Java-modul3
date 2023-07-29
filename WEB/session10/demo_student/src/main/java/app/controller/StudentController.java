@@ -134,11 +134,11 @@ public class StudentController extends HttpServlet {
     }
 
     private Student getValue(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
+
         String name = request.getParameter("name");
         int age = Integer.parseInt(request.getParameter("age"));
         String image = request.getParameter("image");
-        Student student = new Student(id, name, age, image);
+        Student student = new Student( name, age, image);
 
         return student;
     }
