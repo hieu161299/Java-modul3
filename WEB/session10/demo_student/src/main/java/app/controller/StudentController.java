@@ -46,6 +46,7 @@ public class StudentController extends HttpServlet {
         }
 
     }
+
     // khi click vào tên hiển thị toàn bộ thông tin của sinh viên đó
     private void showDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -138,7 +139,7 @@ public class StudentController extends HttpServlet {
         String name = request.getParameter("name");
         int age = Integer.parseInt(request.getParameter("age"));
         String image = request.getParameter("image");
-        Student student = new Student( name, age, image);
+        Student student = new Student(name, age, image);
 
         return student;
     }

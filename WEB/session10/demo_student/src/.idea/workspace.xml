@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29fd9e80-ae4b-4c43-8686-04f438300487" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/main/java/app/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/app/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/WEB-INF/classes/app/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/showAll.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/student_list/showAll.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../apache_TomCat/apache-tomcat-9.0.78/webapps/ROOT/user/login.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2TGtfVxf69xS6KkuTkB7b3DBaDX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/Modul3 - MySQL/WEB/session10/demo_student/src",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29fd9e80-ae4b-4c43-8686-04f438300487" name="Changes" comment="" />
+      <created>1690681349112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690681349112</updated>
+      <workItem from="1690681350099" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
