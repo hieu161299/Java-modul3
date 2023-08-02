@@ -13,9 +13,9 @@
     }
 </style>
 <body>
-<a href="/students?action=create">Thêm mới sinh viên</a>
+
 <a href="/user?action=logout">Đăng xuất</a>
-<a href="/user?action=information&idUser=${idUser}">Thông tin cá nhân</a>
+<a href="">Thông tin cá nhân</a>
 
 <br>
 <table border="1">

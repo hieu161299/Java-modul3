@@ -8,7 +8,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "StudentController", value = "/students")
@@ -50,8 +49,7 @@ public class StudentController extends HttpServlet {
     // khi click vào tên hiển thị toàn bộ thông tin của sinh viên đó
     private void showDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        int index = studentService.findById(id);
-        Student student = studentService.findAll().get(index);
+        Student student = studentService.findStudentById(id);
         request.setAttribute("student", student);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/student_list/detail.jsp");
         dispatcher.forward(request, response);
@@ -71,8 +69,7 @@ public class StudentController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         request.setAttribute("id", id);
 
-        int index = this.studentService.findById(id);
-        Student student = this.studentService.findAll().get(index);
+        Student student = this.studentService.findStudentById(id);
 
         request.setAttribute("student", student);
         RequestDispatcher dispatcher = request.getRequestDispatcher("student_list/edit.jsp");
@@ -120,9 +117,10 @@ public class StudentController extends HttpServlet {
     }
 
     private void editStudent(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+        int id = Integer.parseInt(request.getParameter("id"));
         Student student = getValue(request, response);
-        this.studentService.edit(student.getId(), student);
+        Student student1 = new Student(id , student.getName() , student.getAge() , student.getImage());
+        this.studentService.edit(id, student1);
         response.sendRedirect("/students?action=showAll");
     }
 

@@ -35,23 +35,42 @@ public class StudentService implements IStudentService<Student> {
 
     @Override
     public int findById(int id) {
-        List<Student> studentList = findAll();
+        /*List<Student> studentList = findAll();
         for (int i = 0; i < studentList.size() ; i++) {
             if (studentList.get(i).getId() == id){
                 return i;
             }
-        }
+        }*/
         return -1;
+    }
+    public Student findStudentById(int id){
+        String sql = "select * from students where id = " + id + ";" ;
+        Student student = null;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet =  preparedStatement.executeQuery();
+            while (resultSet.next()){
+
+                String name = resultSet.getString("name");
+                int age = resultSet.getInt("age");
+                String image = resultSet.getString("image");
+                student = new Student(id ,name , age , image);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return student;
     }
 
     @Override
-    public void edit(int idEdit, Student student) {
-        String sql = "update students set " + "name = ' " + student.getName() + "' age = '" + student.getAge() +
-                "' image = '" + student.getImage() + "'" + "where id = ?";
+    public void edit(int id, Student student) {
+        String sql = "update students set name = '" + student.getName() + "' , age = " + student.getAge() +
+                " , image = '" + student.getImage() + "' where id = ?;";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, idEdit);
+            preparedStatement.setInt(1 , id);
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
